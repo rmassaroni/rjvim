@@ -1,0 +1,6 @@
+--Comment.nvim
+--Harpoon?
+--lsp-zero
+--tree-sitter
+--neovim-cmp
+--copilot
