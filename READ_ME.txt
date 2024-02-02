@@ -1,6 +1,9 @@
---Comment.nvim
---Harpoon?
---lsp-zero
---tree-sitter
---neovim-cmp
---copilot
+Harpoon?
+tree-sitter
+copilot
+lua line
+
+
+enchanting table language
+minionese
+

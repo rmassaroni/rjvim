@@ -14,13 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup({
-    --"plugins",
     spec = {
-
         {import = "plugins"},
-        
     },
-
     ui = {
         border = "double",
         size = {
@@ -28,7 +24,6 @@ require("lazy").setup({
             height = 0.8,
         },
     },
-
     checker = {
         enabled = true,
         notify = false,

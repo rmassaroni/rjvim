@@ -33,6 +33,8 @@ return {
 
     --]]
     --
-    require("plugins.LSPs.newlsp")
+    --require("plugins.LSPs.newlsp")
+--    require("plugins.LSPs.newnewlsp")
+    require("plugins.LSPs.lsp3")
 }
 
