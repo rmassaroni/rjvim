@@ -1,1 +1,2 @@
-require("init")
+require("options")
+require("lazysetup")

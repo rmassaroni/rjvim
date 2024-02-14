@@ -14,3 +14,4 @@ vim.opt.shiftwidth = 4
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
+vim.keymap.set('n', '<leader>t', ':NvimTreeOpen<CR>', {noremap = true})

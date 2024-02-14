@@ -3,12 +3,12 @@ return {
     config = function ()
         local alpha = require'alpha'
         local dashboard = require'alpha.themes.dashboard'
- 	    dashboard.section.header.val = require("plugins.startup.rjvim")
+ 	    dashboard.section.header.val = require("plugins.appearance.rjvim")
 	    dashboard.section.buttons.val = {
        	    dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
             dashboard.button("p", "P  New project", ":<CR>"),
             dashboard.button("t", "T  Open tree", ":NvimTreeOpen<CR>"),
-	 	    dashboard.button("c", "C  Config", ":e $HOME/.config/nvim/lua/init.lua<CR> :cd $HOME/.config/nvim/lua<CR> :NvimTreeOpen<CR>"),
+	 	    dashboard.button("c", "C  Config", ":e $HOME/.config/nvim/init.lua<CR> :cd $HOME/.config/nvim/lua<CR> :NvimTreeOpen<CR>"),
             dashboard.button("l", "L  Lazy", ":Lazy<CR>"),
             dashboard.button("m", "M  Mason", ":Mason<CR>"),
     	    dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>"),
