@@ -12,6 +12,7 @@ return {
                 floats = "transparent",
             }
         }
-        vim.cmd([[colorscheme tokyonight]])
+        vim.cmd([[colorscheme tokyonight-moon]])
     end,
+    --vim.keymap.set('n', '<leader>s', )
 }

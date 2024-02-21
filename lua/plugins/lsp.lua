@@ -1,10 +1,6 @@
 return {
     {
-        --"neoclide/coc.nvim",
-        --opts = ""
-        --config = function ()
-
-        --end
+        --"github/copilot.vim" --not working
     },
     {
         --might not need this plugin if i already have mason
@@ -111,6 +107,11 @@ return {
                 capabilities = capabilities,
                 on_attach = on_attach,
             })
+            lspconfig["tsserver"].setup({
+                capabilities = capabilities,
+                on_attach = on_attach,
+            })
+
         end,
     },
     {

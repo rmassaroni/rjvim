@@ -3,8 +3,8 @@ return {
     version = "*",
     lazy = false,
     dependencies = {"nvim-tree/nvim-web-devicons"},
---    config = function()
---        require("nvim-tree").setup {}
---    end
-    opts = {}
+    opts = {},
+
+    vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', {noremap = true}),
+    vim.keymap.set('n', '<A-t>', ':NvimTreeOpen<CR>', {noremap = true}),
 }

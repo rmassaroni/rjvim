@@ -11,7 +11,7 @@ return {
             sync_install = false,
             highlight = { enable = true },
             indent = { enable = true },
-            vim.keymap.set('n', '<leader>c',':CellularAutomaton make_it_rain<CR>', {noremap = true})
         })
-    end
+    end,
+    vim.keymap.set('n', '<leader>c',':CellularAutomaton make_it_rain<CR>', {noremap = true})
 }
