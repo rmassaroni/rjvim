@@ -3,10 +3,6 @@ return {
     config = function ()
         local alpha = require'alpha'
         local dashboard = require'alpha.themes.dashboard'
-        local function reload_dashboard()
-            dashboard.section.header.val = "NEW HEADER"
-            alpha.setup(dashboard.config)
-        end
  	    dashboard.section.header.val = require("plugins.appearance.rjvim")
 	    dashboard.section.buttons.val = {
        	    dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
