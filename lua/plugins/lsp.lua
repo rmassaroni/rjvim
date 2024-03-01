@@ -41,6 +41,7 @@ return {
                     "html",
                     "cssls",
                     "jdtls",
+                    "clangd"
                 },
                 automatic_installation = true,
             })
@@ -108,6 +109,10 @@ return {
                 on_attach = on_attach,
             })
             lspconfig["tsserver"].setup({
+                capabilities = capabilities,
+                on_attach = on_attach,
+            })
+            lspconfig["clangd"].setup({
                 capabilities = capabilities,
                 on_attach = on_attach,
             })
