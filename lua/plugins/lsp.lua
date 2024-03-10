@@ -41,7 +41,8 @@ return {
                     "html",
                     "cssls",
                     "jdtls",
-                    "clangd"
+                    "clangd",
+                    "sqls"
                 },
                 automatic_installation = true,
             })
@@ -116,6 +117,11 @@ return {
                 capabilities = capabilities,
                 on_attach = on_attach,
             })
+            lspconfig["sqls"].setup({
+                capabilities = capabilities,
+                on_attach = on_attach,
+            })
+
 
         end,
     },
