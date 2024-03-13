@@ -16,22 +16,9 @@ vim.opt.expandtab = true
 
 
 
-ColorCount = 1
-TabString = ""
-function ToggleColorScheme()
-    ColorCount = ColorCount + 1
-    --print(ColorCount)
-    local s = "<Tab>"
-    for i = 1, ColorCount, 1
-    do
-        s = s .. "<Tab>"
-    end
-    print(s)
-    TabString = s
-    return s
-end
 
-vim.keymap.set('n', '<leader>g', ':colorscheme ' .. ToggleColorScheme(), {noremap = true})
+--vim.keymap.set('n', '<leader>g', ':colorscheme ' .. ToggleColorScheme(), {noremap = true})
+--vim.cmd[[autocmd BufEnter * if winnr('$') == 1 and vim.fn.bufname('') == 'NvimTree_1' then vim.cmd('q') end]]
 
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
