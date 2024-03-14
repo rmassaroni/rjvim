@@ -1,3 +1,3 @@
-return {
+return {    
     require("plugins.alpha.alpha")
 }

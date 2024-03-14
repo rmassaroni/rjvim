@@ -17,10 +17,7 @@ vim.opt.expandtab = true
 
 
 
---vim.keymap.set('n', '<leader>g', ':colorscheme ' .. ToggleColorScheme(), {noremap = true})
---vim.cmd[[autocmd BufEnter * if winnr('$') == 1 and vim.fn.bufname('') == 'NvimTree_1' then vim.cmd('q') end]]
-
-
+-------LAZY SETUP
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
