@@ -1,4 +1,4 @@
 return {
     require("plugins.appearance.tokyonight"),
-    require("plugins.appearance.alpha")
+--    require("plugins.appearance.alpha")
 }
