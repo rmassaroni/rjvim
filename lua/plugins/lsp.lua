@@ -42,7 +42,8 @@ return {
                     "cssls",
                     "jdtls",
                     "clangd",
-                    "sqls"
+                    "sqls",
+                    "kotlin_language_server"
                 },
                 automatic_installation = true,
             })
@@ -118,6 +119,10 @@ return {
                 on_attach = on_attach,
             })
             lspconfig["sqls"].setup({
+                capabilities = capabilities,
+                on_attach = on_attach,
+            })
+            lspconfig["kotlin_language_server"].setup({
                 capabilities = capabilities,
                 on_attach = on_attach,
             })
