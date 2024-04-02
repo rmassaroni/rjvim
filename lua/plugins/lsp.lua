@@ -125,6 +125,24 @@ return {
             lspconfig["kotlin_language_server"].setup({
                 capabilities = capabilities,
                 on_attach = on_attach,
+                root_dir = function(fname)
+                    local root_files = {
+                        'settings.gradle', -- Gradle (multi-project)
+                        'settings.gradle.kts', -- Gradle (multi-project)
+                        'build.xml', -- Ant
+                        'pom.xml', -- Maven
+                    }
+
+                    local fallback_root_files = {
+                        'build.gradle', -- Gradle
+                        'build.gradle.kts', -- Gradle
+                    }
+
+                    local primary = require'lspconfig'.util.root_pattern(unpack(root_files))(fname)
+                    local fallback = require'lspconfig'.util.root_pattern(unpack(fallback_root_files))(fname)
+                    return primary or fallback
+                end
+
             })
 
 

@@ -45,3 +45,19 @@ require("lazy").setup({
     },
     change_detection = {notify = false},
 })
+
+require'nvim-treesitter.configs'.setup {
+  --ensure_installed = 'all', -- Install all available parsers
+  highlight = {
+    enable = true, -- Enable Treesitter's syntax highlighting
+  },
+  incremental_selection = {
+    enable = true, -- Enable Treesitter's incremental selection
+  },
+  -- Disable other parsers
+  parser = {
+    enabled = { 'treesitter' }, -- Only enable the Treesitter parser
+    disable_other = true, -- Disable all other parsers
+  },
+}
+
