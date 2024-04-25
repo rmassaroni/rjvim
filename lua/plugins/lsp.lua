@@ -1,6 +1,6 @@
 return {
     {
-        "github/copilot.vim" --not working
+        --"github/copilot.vim" --not working
     },
     {
         --might not need this plugin if i already have mason
