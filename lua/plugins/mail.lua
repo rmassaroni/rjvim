@@ -1,0 +1,3 @@
+return {
+    'felipec/notmuch-vim'
+}
