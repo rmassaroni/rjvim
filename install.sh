@@ -12,8 +12,10 @@ else
     else
         echo "Homebrew is not installed. Installing Homebrew..."
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-        eval "$(/opt/homebrew/bin/brew shellenv)"
+        #echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+        #eval "$(/opt/homebrew/bin/brew shellenv)"
+        echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zprofile
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     fi
     brew install neovim
 fi
