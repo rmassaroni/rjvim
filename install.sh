@@ -16,6 +16,7 @@ else
             #sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/Cellar
             sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/var/homebrew
             sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/Cellar
+            sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions
 
             /home/linuxbrew/.linuxbrew/bin/brew update --force --quiet
         #fi
