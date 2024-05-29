@@ -38,5 +38,6 @@ if [ ! -d "$dir" ]; then
     git clone https://github.com/rmassaroni/rjvim.git "$dir"
 fi
 
+source ~/.bashrc
 echo Done
 
