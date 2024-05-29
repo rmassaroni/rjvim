@@ -1,6 +1,7 @@
 #!/bin/bash
 dir="$HOME/.config/nvim"
 
+sudo apt install python3-venv
 if command -v nvim &> /dev/null
 then
     echo "Neovim is already installed."
@@ -31,6 +32,7 @@ else
     source $HOME/.bashrc
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     source ~/.bashrc
+    brew install go
     brew install neovim
 fi
 
