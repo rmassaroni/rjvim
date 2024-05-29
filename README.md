@@ -1,3 +1,4 @@
 ```bash
-bash <(curl https://raw.githubusercontent.com/rmassaroni/rjvim/main/install.sh); source ~/.bashrc
+bash <(curl https://raw.githubusercontent.com/rmassaroni/rjvim/main/install.sh);
+source ~/.bashrc
 ```
