@@ -26,7 +26,7 @@ else
 
 
     fi
-    (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/$(whoami)/.bashrc
+    (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/$(whoami)/.zshrc
     source $HOME/.bashrc
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     source ~/.bashrc
@@ -38,7 +38,7 @@ if [ ! -d "$dir" ]; then
     git clone https://github.com/rmassaroni/rjvim.git "$dir"
 fi
 
-source ~/.bashrc
+source ~/.zshrc
 source ~/.bash_profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 echo Done
