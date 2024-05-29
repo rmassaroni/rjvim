@@ -28,6 +28,7 @@ else
     fi
     (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/$(whoami)/.bashrc
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    source ~/.bashrc
     brew install neovim
 fi
 
