@@ -12,6 +12,10 @@ else
     else
         echo "Homebrew is not installed. Installing Homebrew..."
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        if [ -d "/home/linuxbrew/.linuxbrew/Cellar" ]; then
+            sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/Cellar
+            /home/linuxbrew/.linuxbrew/bin/brew update --force --quiet
+        fi
         #echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
         #eval "$(/opt/homebrew/bin/brew shellenv)"
         echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zprofile
