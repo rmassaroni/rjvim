@@ -15,6 +15,8 @@ else
         #if [ -d "/home/linuxbrew/.linuxbrew/Cellar" ]; then
             #sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/Cellar
             sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/var/homebrew
+            sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/Cellar
+
             /home/linuxbrew/.linuxbrew/bin/brew update --force --quiet
         #fi
         #echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
