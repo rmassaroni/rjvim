@@ -19,8 +19,11 @@ else
         fi
         #echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
         #eval "$(/opt/homebrew/bin/brew shellenv)"
-        echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zprofile
+        #echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zprofile
+        #eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/$(whoami)/.bashrc
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
     fi
     brew install neovim
 fi
