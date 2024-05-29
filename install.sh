@@ -39,5 +39,6 @@ if [ ! -d "$dir" ]; then
 fi
 
 source ~/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 echo Done
 
