@@ -14,7 +14,9 @@ vim.opt.shiftwidth = 4
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
-vim.g.closetag_enable_react_fragment = 1
+-- vim.g.closetag_enable_react_fragment = 1
+
+vim.diagnostic.config({virtual_text=false})
 
 
 -------LAZY SETUP

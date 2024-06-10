@@ -113,6 +113,38 @@ return {
             lspconfig["tsserver"].setup({
                 capabilities = capabilities,
                 on_attach = on_attach,
+                init_options = {
+                    lint = {
+                        unusedVariable = "none" -- Suppress unused variable warnings
+                    }
+                },
+                settings = {
+                    javascript = {
+                        suggest = {
+                            names = true,
+                            paths = true
+                        },
+                        validate = {
+                            enable = true
+                        },
+                        preferences = {
+                            importModuleSpecifierPreference = "relative"
+                        }
+                    },
+                    typescript = {
+                        suggest = {
+                            names = true,
+                            paths = true
+                        },
+                        validate = {
+                            enable = true
+                        },
+                        preferences = {
+                            importModuleSpecifierPreference = "relative"
+                        }
+                    }
+                },
+
             })
             lspconfig["clangd"].setup({
                 capabilities = capabilities,
@@ -144,6 +176,11 @@ return {
                 end
 
             })
+            -- lspconfig["eslint_d"].setup({
+            --     capabilities = capabilities,
+            --     on_attach = on_attach,
+            --
+            -- })
 
 
         end,
