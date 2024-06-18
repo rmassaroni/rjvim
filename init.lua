@@ -19,6 +19,11 @@ vim.opt.expandtab = true
 vim.diagnostic.config({virtual_text=false})
 
 
+
+vim.opt.clipboard:append("unnamedplus")
+
+
+
 -------LAZY SETUP
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
