@@ -20,6 +20,8 @@ vim.diagnostic.config({virtual_text=false})
 
 
 
+vim.api.nvim_set_keymap('n', '<leader>y', 'ggVG"+y', { noremap = true, silent = true })
+
 vim.opt.clipboard:append("unnamedplus")
 
 
