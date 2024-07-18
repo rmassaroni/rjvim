@@ -24,20 +24,20 @@ vim.api.nvim_set_keymap('n', '<leader>y', 'ggVG"+y', { noremap = true, silent = 
 
 vim.opt.clipboard:append("unnamedplus")
 
-local function format_pasted_text()
-    local last_cursor_position = vim.fn.getpos(".")
-    vim.cmd("normal! `[v`]")
-    vim.cmd("normal! =")
-    vim.fn.setpos('.', last_cursor_position)
-end
-
-vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = function()
-        if vim.v.event.operator == 'y' then
-            format_pasted_text()
-        end
-    end,
-})
+-- local function format_pasted_text()
+--     local last_cursor_position = vim.fn.getpos(".")
+--     vim.cmd("normal! `[v`]")
+--     vim.cmd("normal! =")
+--     vim.fn.setpos('.', last_cursor_position)
+-- end
+--
+-- vim.api.nvim_create_autocmd("TextYankPost", {
+--     callback = function()
+--         if vim.v.event.operator == 'y' then
+--             format_pasted_text()
+--         end
+--     end,
+-- })
 
 -------LAZY SETUP
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
