@@ -40,7 +40,8 @@ vim.opt.clipboard:append("unnamedplus")
 -- })
 
 -------LAZY SETUP
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+-- local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath = "C:\\Program Files\\nvim-win64\\bin\\lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
