@@ -1,3 +1,0 @@
-return {
-    'felipec/notmuch-vim'
-}
