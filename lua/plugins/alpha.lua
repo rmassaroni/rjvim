@@ -21,7 +21,7 @@ return {
             dashboard.button("t", "ℸ  Open tree", ":NvimTreeOpen<CR>"),
             -- 	 	    dashboard.button("c", "ᓵ  Config", ":e $HOME/.config/nvim/init.lua<CR> :cd $HOME/.config/nvim/lua/plugins<CR> :NvimTreeOpen<CR>"),
             dashboard.button("l", "ꖎ  Lazy", ":Lazy<CR>"),
-            --             dashboard.button("m", "ᒲ  Mason", ":Mason<CR>"),
+            dashboard.button("m", "ᒲ  Mason", ":Mason<CR>"),
             dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>"),
             --dashboard.button("<Right>", "Toggle", reload_dashboard)
         }
