@@ -49,41 +49,41 @@ return {
             capabilities = capabilities,
             on_attach = on_attach,
         })
-        lspconfig["tsserver"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            init_options = {
-                lint = {
-                    unusedVariable = "none" -- Suppress unused variable warnings
-                }
-            },
-            settings = {
-                javascript = {
-                    suggest = {
-                        names = true,
-                        paths = true
-                    },
-                    validate = {
-                        enable = true
-                    },
-                    preferences = {
-                        importModuleSpecifierPreference = "relative"
-                    }
-                },
-                typescript = {
-                    suggest = {
-                        names = true,
-                        paths = true
-                    },
-                    validate = {
-                        enable = true
-                    },
-                    preferences = {
-                        importModuleSpecifierPreference = "relative"
-                    }
-                }
-            }
-        })
+        -- lspconfig["tsserver"].setup({
+        --     capabilities = capabilities,
+        --     on_attach = on_attach,
+        --     init_options = {
+        --         lint = {
+        --             unusedVariable = "none" -- Suppress unused variable warnings
+        --         }
+        --     },
+        --     settings = {
+        --         javascript = {
+        --             suggest = {
+        --                 names = true,
+        --                 paths = true
+        --             },
+        --             validate = {
+        --                 enable = true
+        --             },
+        --             preferences = {
+        --                 importModuleSpecifierPreference = "relative"
+        --             }
+        --         },
+        --         typescript = {
+        --             suggest = {
+        --                 names = true,
+        --                 paths = true
+        --             },
+        --             validate = {
+        --                 enable = true
+        --             },
+        --             preferences = {
+        --                 importModuleSpecifierPreference = "relative"
+        --             }
+        --         }
+        --     }
+        -- })
         lspconfig["clangd"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
