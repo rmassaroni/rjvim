@@ -38,7 +38,7 @@ if %ERRORLEVEL%==0 (
 REM Check if config directory exists, if not, clone the repository
 if not exist "%CONFIG_DIR%" (
     echo Cloning Neovim configuration...
-    git clone https://github.com/rmassaroni/rjvim.git "%CONFIG_DIR%"
+    git clone https://github.com/rmassaroni/windows/rjvim.git "%CONFIG_DIR%"
 ) else (
     echo Neovim configuration already exists.
 )
