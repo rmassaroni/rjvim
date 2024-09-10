@@ -2,17 +2,16 @@
 setlocal
 
 REM Set the config directory path
-set "HOME=%USERPROFILE%"
-set "CONFIG_DIR=%HOME%\.config\nvim"
+set "CONFIG_DIR=%LOCALAPPDATA%\nvim"
 
 REM Check if Neovim is installed
 where nvim >nul 2>nul
 if %ERRORLEVEL%==0 (
     echo Neovim is already installed.
 ) else (
-    echo Neovim is not installed. Installing using Chocolatey or Scoop...
+    echo Neovim is not installed. Installing using Chocolatey...
 
-    REM Install Chocolatey if not installed (if preferred over Scoop)
+    REM Install Chocolatey if not installed
     where choco >nul 2>nul
     if %ERRORLEVEL%==0 (
         echo Chocolatey is already installed.
