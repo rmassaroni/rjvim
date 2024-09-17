@@ -28,7 +28,9 @@ return  {
                 "jdtls",
                 "clangd",
                 "sqls",
-                "kotlin_language_server"
+                "kotlin_language_server",
+                "gopls",
+                "rust_analyzer"
             },
             automatic_installation = true,
         })
