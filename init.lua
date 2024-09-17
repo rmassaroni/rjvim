@@ -14,7 +14,6 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 vim.opt.clipboard:append("unnamedplus")
 
-vim.api.nvim_set_keymap('n', '<leader>y', 'ggVG"+y', { noremap = true, silent = true })
 
 
 -------LAZY SETUP
@@ -51,4 +50,5 @@ require("lazy").setup({
 local functions = require('functions')
 
 vim.api.nvim_create_user_command('ToggleVirtualText', functions.toggle_virtual_text, {})
-vim.api.nvim_set_keymap('n', '<leader>v', ':ToggleVirtualText<CR>', { noremap = true, silent = true })
+
+require('keymaps')
