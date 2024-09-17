@@ -1,7 +1,7 @@
 local M = {}
 
 M.ToggleVirtualText = function()
-    local current_config = vim.diagnostic.config()
+    local current_config = vim.diagnostic.config() or {}
     local new_virtual_text_state = not current_config.virtual_text
 
     vim.diagnostic.config({
