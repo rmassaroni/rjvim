@@ -48,13 +48,5 @@ require("lazy").setup({
 
 
 
--------FUNCTIONS
-local functions = require('functions')
-
-for name, func in pairs(functions) do
-    if type(func) == "function" then
-        vim.api.nvim_create_user_command(name:gsub("^%l", string.upper), func, {})
-    end
-end
-
+require('functions')
 require('keymaps')

@@ -1,7 +1,5 @@
 local M = {}
 
--- function ToggleVirtualText()
--- M.toggle_virtual_text = function()
 M.ToggleVirtualText = function()
     local current_config = vim.diagnostic.config()
     local new_virtual_text_state = not current_config.virtual_text
@@ -14,6 +12,13 @@ M.ToggleVirtualText = function()
         print("Virtual text enabled")
     else
         print("Virtual text disabled")
+    end
+end
+
+-- function -> user command automation
+for name, func in pairs(M) do
+    if type(func) == "function" then
+        vim.api.nvim_create_user_command(name:gsub("^%l", string.upper), func, {})
     end
 end
 
