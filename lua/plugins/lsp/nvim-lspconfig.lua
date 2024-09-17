@@ -15,7 +15,7 @@ return {
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
         vim.diagnostic.config({
-            virtual_text = false,
+            virtual_text = true,
             signs = {
                 text = {
                     [vim.diagnostic.severity.ERROR] = "",
@@ -44,11 +44,11 @@ return {
                     workspace = {
                         library = {
                             [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                            [vim.fn.stdpath("config") .. "/lua"] = true,
-                        },
-                    },
-                },
-            },
+                            [vim.fn.stdpath("config") .. "/lua"] = true
+                        }
+                    }
+                }
+            }
         })
         lspconfig["html"].setup({
             capabilities = capabilities,

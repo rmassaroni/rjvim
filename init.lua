@@ -14,8 +14,6 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 vim.opt.clipboard:append("unnamedplus")
 
-vim.diagnostic.config({virtual_text=false})
-
 vim.api.nvim_set_keymap('n', '<leader>y', 'ggVG"+y', { noremap = true, silent = true })
 
 
