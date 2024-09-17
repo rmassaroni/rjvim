@@ -13,33 +13,21 @@ return {
             opts.buffer = bufnr
         end
         local capabilities = cmp_nvim_lsp.default_capabilities()
-        local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
-        for type, icon in pairs(signs) do
-            local hl = "DiagnosticSign" .. type
-            -- vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" }) --removed due to deprecation. need to find alternative
-            -- vim.diagnostic.config({ signs = true, underline = true, update_in_insert = false, virtual_text = false }) --alternative not working as well
-        end
 
         vim.diagnostic.config({
             virtual_text = false,
             signs = {
-                -- severity = {
-                --     [vim.diagnostic.severity.ERROR] = { text = signs.Error },
-                --     [vim.diagnostic.severity.WARN]  = { text = signs.Warn },
-                --     [vim.diagnostic.severity.INFO]  = { text = signs.Info },
-                --     [vim.diagnostic.severity.HINT]  = { text = signs.Hint },
-                -- },
                 text = {
-                    [vim.diagnostic.severity.ERROR] = " ",
-                    [vim.diagnostic.severity.WARN]  = " ",
-                    [vim.diagnostic.severity.INFO]  = " ",
-                    [vim.diagnostic.severity.HINT]  = "󰠠 ",
+                    [vim.diagnostic.severity.ERROR] = "",
+                    [vim.diagnostic.severity.WARN]  = "",
+                    [vim.diagnostic.severity.INFO]  = "",
+                    [vim.diagnostic.severity.HINT]  = "󰠠",
                 },
                 linehl = {
-                    [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+                    -- [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
                 },
                 numhl = {
-                    [vim.diagnostic.severity.WARN] = 'WarningMsg',
+                    -- [vim.diagnostic.severity.WARN] = 'WarningMsg',
                 }
             },
             underline = true,
