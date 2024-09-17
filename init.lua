@@ -28,7 +28,6 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
-
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = {import = "plugins"},
@@ -47,8 +46,15 @@ require("lazy").setup({
     change_detection = {notify = false},
 })
 
+
+
+-------FUNCTIONS
 local functions = require('functions')
 
-vim.api.nvim_create_user_command('ToggleVirtualText', functions.toggle_virtual_text, {})
+for name, func in pairs(functions) do
+    if type(func) == "function" then
+        vim.api.nvim_create_user_command(name:gsub("^%l", string.upper), func, {})
+    end
+end
 
 require('keymaps')
