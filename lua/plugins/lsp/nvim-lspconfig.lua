@@ -16,7 +16,7 @@ return {
         local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
         for type, icon in pairs(signs) do
             local hl = "DiagnosticSign" .. type
-            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+            -- vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" }) --removed due to deprecation. need to find alternative
         end
         lspconfig["lua_ls"].setup({
             capabilities = capabilities,
