@@ -7,6 +7,7 @@
 - Python
 - Lua
 - CSS
+- Java
 
 ### Not Working LSPs
 - TypeScript
@@ -19,4 +20,3 @@
 - C
 - C++
 - Go
-- Java
