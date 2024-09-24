@@ -15,7 +15,7 @@ return {
     |__/                   
 ]]
         dashboard.section.buttons.val = {
-            --        	    dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+            dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
             --             dashboard.button("p", "P  New project", ":<CR>"),
             -- --            dashboard.button("s", "S  Script", ":e ~/.bashrc<CR>"),
             dashboard.button("t", "ℸ  Open tree", ":NvimTreeOpen<CR>"),
