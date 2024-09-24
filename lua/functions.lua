@@ -1,3 +1,5 @@
+-- CUSTOM USER FUNCTIONS
+
 local M = {}
 
 M.ToggleVirtualText = function()
@@ -15,7 +17,7 @@ M.ToggleVirtualText = function()
     end
 end
 
--- function -> user command automation
+-- user command automation function
 for name, func in pairs(M) do
     if type(func) == "function" then
         vim.api.nvim_create_user_command(name:gsub("^%l", string.upper), func, {})

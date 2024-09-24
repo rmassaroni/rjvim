@@ -3,6 +3,3 @@ vim.api.nvim_set_keymap('n', '<leader>y', 'ggVG"+y', { noremap = true, silent = 
 
 --toggles virtual text
 vim.api.nvim_set_keymap('n', '<leader>v', ':ToggleVirtualText<CR>', { noremap = true, silent = true })
-
---toggles nvimtree
-vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', {noremap = true})

@@ -19,6 +19,6 @@ return {
             }
         })
 
-        -- vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', {noremap = true})
+        vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', {noremap = true})
     end
 }
