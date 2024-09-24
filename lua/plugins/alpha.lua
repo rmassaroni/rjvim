@@ -8,17 +8,20 @@ local function layout()
     ---@param opts table?
     ---@return table
     local function button(sc, txt, keybind, keybind_opts, opts)
+
         local def_opts = {
             cursor = 3,
             align_shortcut = "right",
             hl_shortcut = "AlphaButtonShortcut",
             hl = "AlphaButton",
             width = 35,
-            position = "center",
+            position = "center"
         }
+
         opts = opts and vim.tbl_extend("force", def_opts, opts) or def_opts
         opts.shortcut = sc
         local sc_ = sc:gsub("%s", ""):gsub("SPC", "<Leader>")
+
         local on_press = function()
             local key = vim.api.nvim_replace_termcodes(keybind or sc_ .. "<Ignore>", true, false, true)
             vim.api.nvim_feedkeys(key, "t", false)
@@ -47,7 +50,7 @@ local function layout()
                 rawset(table, index, value)
                 return value
             end
-        end,
+        end
     })
 
     ---@return string
@@ -70,7 +73,7 @@ local function layout()
             button("SPC t s", "  Open session"),
             button("n", "  New file", "<Cmd>ene<CR>"),
             button("p", "󰂖  Plugins", "<Cmd>Lazy<CR>"),
-            button("q", "󰅚  Quit", "<Cmd>qa<CR>"),
+            button("q", "󰅚  Quit", "<Cmd>qa<CR>")
         }
     end
 
@@ -106,7 +109,6 @@ local function layout()
 
     math.randomseed(os.time())
     local header_color = "AlphaCol" .. math.random(11)
-
 
     return {
         { type = "padding", val = 1 },
@@ -145,7 +147,6 @@ local function layout()
         },
     }
 end
-
 
 local exampleconfig = {  "goolord/alpha-nvim",
   event = "VimEnter",
@@ -215,4 +216,70 @@ local oldconfig = {
     end
 }
 
-return exampleconfig
+
+
+
+local ascii = {
+    "       _       _               ",
+    "      (_)     (_)              ",
+    "  _ __ ___   ___ _ __ ___      ",
+    " | '__| \\ \\ / / | '_ ` _ \\  ",
+    " | |  | |\\ V /| | | | | | |   ",
+    " |_|  | | \\_/ |_|_| |_| |_|   ",
+    "     _/ |                      ",
+    "    |__/                       "
+}
+
+
+
+
+local newconfig = {
+    "goolord/alpha-nvim",
+    config = function()
+        local alpha = require'alpha'
+        local dashboard = require'alpha.themes.dashboard'
+        dashboard.section.header.val = ascii
+        dashboard.section.buttons.val = {
+            dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+            dashboard.button("t", "ℸ  Open tree", ":NvimTreeOpen<CR>"),
+            dashboard.button("l", "ꖎ  Lazy", ":Lazy<CR>"),
+            dashboard.button("m", "ᒲ  Mason", ":Mason<CR>"),
+            dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>"),
+        }
+        dashboard.section.footer.val = vim.g.colors_name
+        dashboard.config.opts.noautocmd = true
+        alpha.setup(dashboard.config)
+    end
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return newconfig
