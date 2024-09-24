@@ -230,6 +230,42 @@ local ascii = {
 }
 
 
+local function newlayout()
+    local button = require("alpha.themes.dashboard").button
+
+    return {
+        { type = "padding", val = 1 },
+        {
+            type = "text",
+            val = ascii,
+            opts = { hl = "AlphaCol1", position = "center" }
+        },
+        { type = "padding", val = 1 },
+        {
+            type = "group",
+            val = {
+                button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+                button("t", "ℸ  Open tree", ":NvimTreeOpen<CR>"),
+                button("l", "ꖎ  Lazy", ":Lazy<CR>"),
+                button("m", "ᒲ  Mason", ":Mason<CR>"),
+                button("q", "󰅚  Quit NVIM", ":qa<CR>")
+            },
+            opts = { spacing = 1 }
+        },
+        { type = "padding", val = 1 },
+        {
+            type = "text",
+            val = vim.g.colors_name,
+            opts = { hl = "AlphaCol1", position = "center" }
+        },
+        -- {
+            -- type = "text",
+            -- val = lazycache "fortune",
+            -- opts = { hl = "AlphaQuote", position = "center" },
+        -- },
+
+    }
+end
 
 
 
@@ -269,7 +305,7 @@ local newconfig = {
                         dashboard.button("m", "ᒲ  Mason", ":Mason<CR>"),
                         dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>")
                     },
-                    opts = { spacing = 0 }
+                    opts = { spacing = 1 }
                 },
                 { type = "padding", val = 1 },
                 {
@@ -282,34 +318,17 @@ local newconfig = {
     end
 }
 
+local newconfig2 = {
+    "goolord/alpha-nvim",
+    event = "VimEnter", -- correct cursor position
+    config = function()
+        local alpha = require'alpha'
+        local dashboard = require'alpha.themes.dashboard'
 
+        alpha.setup {
+            layout = newlayout()
+        }
+    end
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-return newconfig
+return newconfig2
