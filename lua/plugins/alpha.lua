@@ -180,7 +180,6 @@ local exampleconfig = {  "goolord/alpha-nvim",
 local oldconfig = {
     "goolord/alpha-nvim",
     config = function ()
-        layout = layout()
         local alpha = require'alpha'
         local dashboard = require'alpha.themes.dashboard'
         dashboard.section.header.val =
@@ -233,22 +232,53 @@ local ascii = {
 
 
 
+
 local newconfig = {
     "goolord/alpha-nvim",
+    event = "VimEnter", -- correct cursor position
     config = function()
         local alpha = require'alpha'
         local dashboard = require'alpha.themes.dashboard'
-        dashboard.section.header.val = ascii
-        dashboard.section.buttons.val = {
-            dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-            dashboard.button("t", "ℸ  Open tree", ":NvimTreeOpen<CR>"),
-            dashboard.button("l", "ꖎ  Lazy", ":Lazy<CR>"),
-            dashboard.button("m", "ᒲ  Mason", ":Mason<CR>"),
-            dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>"),
+        -- dashboard.section.header.val = ascii
+        -- dashboard.section.buttons.val = {
+        --     dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+        --     dashboard.button("t", "ℸ  Open tree", ":NvimTreeOpen<CR>"),
+        --     dashboard.button("l", "ꖎ  Lazy", ":Lazy<CR>"),
+        --     dashboard.button("m", "ᒲ  Mason", ":Mason<CR>"),
+        --     dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>"),
+        -- }
+        -- dashboard.section.footer.val = vim.g.colors_name
+        -- dashboard.config.opts.noautocmd = true
+        -- alpha.setup(dashboard.config)
+
+        alpha.setup {
+            layout = {
+                { type = "padding", val = 1 },
+                {
+                    type = "text",
+                    val = ascii,
+                    opts = { hl = "AlphaCol1", position = "center" }
+                },
+                { type = "padding", val = 1 },
+                {
+                    type = "group",
+                    val = {
+                        dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+                        dashboard.button("t", "ℸ  Open tree", ":NvimTreeOpen<CR>"),
+                        dashboard.button("l", "ꖎ  Lazy", ":Lazy<CR>"),
+                        dashboard.button("m", "ᒲ  Mason", ":Mason<CR>"),
+                        dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>")
+                    },
+                    opts = { spacing = 0 }
+                },
+                { type = "padding", val = 1 },
+                {
+                    type = "text",
+                    val = vim.g.colors_name,
+                    opts = { hl = "AlphaCol1", position = "center" }
+                }
+            }
         }
-        dashboard.section.footer.val = vim.g.colors_name
-        dashboard.config.opts.noautocmd = true
-        alpha.setup(dashboard.config)
     end
 }
 
