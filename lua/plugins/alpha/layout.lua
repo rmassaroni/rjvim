@@ -5,7 +5,7 @@ local asciiheader = require('plugins.alpha.ascii')
 ---@return table
 local function layout()
     math.randomseed(os.time())
-    local header_color = "AlphaCol" .. math.random(11)
+    local header_color = "AlphaCol" .. math.random(11) -- not working
 
     return {
         {
@@ -18,7 +18,7 @@ local function layout()
             val = buttons(),
             opts = { spacing = 1, position = "center" }
         },
-        { type = "padding", val = 1 },
+        { type = "padding", val = 2 },
         {
             type = "text",
             val = vim.g.colors_name,
@@ -30,7 +30,7 @@ local function layout()
             val = lazycache "info",
             opts = { hl = header_color, position = "center" },
         },
-        { type = "padding", val = 1 },
+        { type = "padding", val = 3 },
         -- {
         --     type = "text",
         --     val = "  00-00-0000   00:00:00",
@@ -51,7 +51,7 @@ local function layout()
             val = lazycache "mru",
             opts = { spacing = 0 },
         },
-        { type = "padding", val = 1 },
+        { type = "padding", val = 3 },
         {
             type = "text",
             val = lazycache "fortune",
