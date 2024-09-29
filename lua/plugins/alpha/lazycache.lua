@@ -22,6 +22,7 @@ local lazycache = setmetatable({}, {
 lazycache.info = function()
     local plugins = #vim.tbl_keys(require("lazy").plugins())
     local v = vim.version()
+    -- local color = vim.g.colors_name
     local datetime = os.date " %m-%d-%Y   %I:%M %p"
     local platform = vim.fn.has "win32" == 1 and "" or ""
     return string.format("󰂖 %d  %s %d.%d.%d  %s", plugins, platform, v.major, v.minor, v.patch, datetime)

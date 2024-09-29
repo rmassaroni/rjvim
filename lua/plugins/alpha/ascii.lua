@@ -18,7 +18,7 @@ local function asciiheader()
             val = ascii,
             opts = { hl = "AlphaCol1", position = "center" }
         },
-        { type = "padding", val = 1 }
+        { type = "padding", val = 0 }
     }
 end
 

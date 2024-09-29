@@ -14,38 +14,23 @@ local function layout()
             opts = { spacing = 1, position = "center" }
         },
         {
-            type = "group",
-            val = buttons(),
-            opts = { spacing = 1, position = "center" }
-        },
-        { type = "padding", val = 2 },
-        {
-            type = "text",
-            val = vim.g.colors_name,
-            opts = { hl = "AlphaCol1", position = "center" }
-        },
-        { type = "padding", val = 1 },
-        {
             type = "text",
             val = lazycache "info",
             opts = { hl = header_color, position = "center" },
         },
+        { type = "padding", val = 2 },
+        {
+            type = "group",
+            val = buttons(),
+            opts = { spacing = 1, position = "center" }
+        },
         { type = "padding", val = 3 },
-        -- {
-        --     type = "text",
-        --     val = "  00-00-0000   00:00:00",
-        --     opts = { hl = "AlphaCol1", position = "center" }
-        -- },
-        -- {
-        --     type = "text",
-        --     val = "󰂖 00   0.0.0  00:00:00",
-        --     opts = { hl = "AlphaCol1", position = "center" }
-        -- },
         {
             type = "text",
             val = "Recent Files",
             opts = { hl = "AlphaCol1", position = "center" }
         },
+        { type = "padding", val = 1 },
         {
             type = "group",
             val = lazycache "mru",
