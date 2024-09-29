@@ -1,4 +1,4 @@
-return {
+local ascii = {
     "       _       _               ",
     "      (_)     (_)              ",
     "  _ __ ___   ___ _ __ ___      ",
@@ -8,3 +8,18 @@ return {
     "     _/ |                      ",
     "    |__/                       "
 }
+
+---@return table
+local function asciiheader()
+    return {
+        { type = "padding", val = 1 },
+        {
+            type = "text",
+            val = ascii,
+            opts = { hl = "AlphaCol1", position = "center" }
+        },
+        { type = "padding", val = 1 }
+    }
+end
+
+return asciiheader
