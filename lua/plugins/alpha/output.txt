@@ -1,0 +1,45 @@
+[?25l[?7l            .-/+oossssoo+/-.
+        `:+ssssssssssssssssss+:`
+      -+ssssssssssssssssssyyssss+-
+    .ossssssssssssssssssdMMMNysssso.
+   /ssssssssssshdmmNNmmyNMMMMhssssss/
+  +ssssssssshmydMMMMMMMNddddyssssssss+
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.
++sssshhhyNMMNyssssssssssssyNMMMysssssss+
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso
++sssshhhyNMMNyssssssssssssyNMMMysssssss+
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.
+ /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/
+  +sssssssssdmydMMMMMMMMddddyssssssss+
+   /ssssssssssshdmNNNNmyNMMMMhssssss/
+    .ossssssssssssssssssdMMMNysssso.
+      -+sssssssssssssssssyyyssss+-
+        `:+ssssssssssssssssss+:`
+            .-/+oossssoo+/-.
+[20A[9999999D[43Crjm@RJM-AW 
+[43C---------- 
+[43COS: Ubuntu 24.04.1 LTS x86_64 
+[43CHost: Alienware 15 R3 1.1.9 
+[43CKernel: 6.8.0-45-generic 
+[43CUptime: 1 day, 41 mins 
+[43CPackages: 2505 (dpkg), 83 (brew), 11 (flatpak), 33 (snap) 
+[43CShell: zsh 5.9 
+[43CResolution: 1920x1080, 1920x1080 
+[43CDE: GNOME 46.0 
+[43CWM: Mutter 
+[43CWM Theme: Adwaita 
+[43CTheme: Yaru-dark [GTK2/3] 
+[43CIcons: Yaru-dark [GTK2/3] 
+[43CTerminal: gnome-terminal 
+[43CCPU: Intel i7-7700HQ (8) @ 3.800GHz 
+[43CGPU: NVIDIA GeForce GTX 1070 Mobile 
+[43CGPU: Intel HD Graphics 630 
+[43CMemory: 2516MiB / 15861MiB 
+
+[43C                        
+[43C                        
+
+
+[?25h[?7h

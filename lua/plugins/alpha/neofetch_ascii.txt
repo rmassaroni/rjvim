@@ -1,0 +1,20 @@
+rjm@RJM-AW 
+---------- 
+OS: Ubuntu 24.04.1 LTS x86_64 
+Host: Alienware 15 R3 1.1.9 
+Kernel: 6.8.0-45-generic 
+Uptime: 1 day, 27 mins 
+Packages: 2505 (dpkg), 83 (brew), 11 (flatpak), 33 (snap) 
+Shell: zsh 5.9 
+Resolution: 1920x1080, 1920x1080 
+DE: GNOME 46.0 
+WM: Mutter 
+WM Theme: Adwaita 
+Theme: Yaru-dark [GTK2/3] 
+Icons: Yaru-dark [GTK2/3] 
+Terminal: gnome-terminal 
+CPU: Intel i7-7700HQ (8) @ 3.800GHz 
+GPU: NVIDIA GeForce GTX 1070 Mobile 
+GPU: Intel HD Graphics 630 
+Memory: 2457MiB / 15861MiB 
+
