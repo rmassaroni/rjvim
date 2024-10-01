@@ -16,7 +16,12 @@ local function asciiheader()
         {
             type = "text",
             val = ascii,
-            opts = { hl = "AlphaCol1", position = "center" }
+            -- opts = { hl = "AlphaCol1", position = "center" }
+            opts = {
+                position = "center",
+                hl = "Type",
+                -- wrap = "overflow";
+            },
         },
         { type = "padding", val = 0 }
     }
