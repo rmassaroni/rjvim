@@ -46,4 +46,4 @@ local function layout()
     }
 end
 
-return layout();
+return layout()

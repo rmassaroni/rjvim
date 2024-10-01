@@ -5,6 +5,6 @@ return {
         require'alpha'.setup {
             layout = require'plugins.alpha.layout'
         }
-        -- require'alpha'.setup(require'plugins.alpha.layout')
+        -- require'alpha'.setup(require'plugins.alpha.layout')() -- one-liner not working
     end
 }

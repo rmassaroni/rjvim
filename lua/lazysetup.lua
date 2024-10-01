@@ -1,6 +1,3 @@
---local lazypath = "C:\\Program Files\\nvim-win64\\bin\\lazy.nvim"
--- local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
 local is_windows = vim.loop.os_uname().version:match("Windows")
 local lazypath
 
