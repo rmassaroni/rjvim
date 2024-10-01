@@ -1,20 +1,25 @@
 local lazycache = require('plugins.alpha.lazycache')
 local buttons = require('plugins.alpha.buttons')
 local asciiheader = require('plugins.alpha.ascii')
--- local neofetch = require('plugins.alpha.neofetch')
--- local neofetch = require('plugins.alpha.neofetch_ascii')
 
 ---@return table
 local function layout()
     math.randomseed(os.time())
     local header_color = "AlphaCol" .. math.random(11) -- not working
-    -- local function get_neofetch_output()
-    --     local handle = io.popen('neofetch --off')
-    --     local result = handle:read('*a')
-    --     handle:close()
-    --     return vim.split(result, '\n')
+
+    -- local function read_ascii_file(filepath)
+    --     local lines = {}
+    --     local file = io.open(filepath, "r")
+    --     if file then
+    --         for line in file:lines() do
+    --             table.insert(lines, line)
+    --         end
+    --         file:close()
+    --     else
+    --         print("Could not read the Neofetch ASCII file: " .. filepath)
+    --     end
+    --     return lines
     -- end
-    --
     local function read_ascii_file(filepath)
         local lines = {}
         local file = io.open(filepath, "r")
@@ -70,7 +75,7 @@ local function layout()
         {
             type = "text",
             val = neofetch_ascii,
-            opts = { hl = "AlphaCol2", position = "center" }
+            opts = { hl = "AlphaCol2", position = "center", wrap = true },
         },
 
 
