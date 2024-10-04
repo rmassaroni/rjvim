@@ -32,10 +32,12 @@ end
 lazycache.mru = function()
     local result = {}
     for _, filename in ipairs(vim.v.oldfiles) do
-        -- if vim.loop.fs_stat(filename) ~= nil then
         if vim.fn.filereadable(filename) == 1 then
             local icon, hl = require("nvim-web-devicons").get_icon(filename, vim.fn.fnamemodify(filename, ":e"))
             local filename_short = string.sub(vim.fn.fnamemodify(filename, ":t"), 1, 30)
+
+            icon = icon or "" -- unknown file types
+
             table.insert(
                 result,
                 require("alpha.themes.dashboard").button(

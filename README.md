@@ -7,4 +7,3 @@ powershell -NoProfile -Command "Set-ExecutionPolicy Bypass -Scope Process -Force
 - config button not working
 - ascii colors
 - multiple columns alpha
-- nil filetype symbol on mri
