@@ -72,11 +72,11 @@ local function layout()
             val = lazycache "fortune",
             opts = { hl = "AlphaQuote", position = "center" },
         },
-        {
-            type = "text",
-            val = neofetch_ascii,
-            opts = { hl = "AlphaCol2", position = "center", wrap = true },
-        },
+        -- {
+        --     type = "text",
+        --     val = neofetch_ascii,
+        --     opts = { hl = "AlphaCol2", position = "center", wrap = true },
+        -- },
 
 
     }
