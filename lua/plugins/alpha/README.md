@@ -1,8 +1,7 @@
 - leader key
 - plugins
-- date
 - neofetch
 - cowsay
 - colors not working
-- config shortcut
+- fix config shortcut
 - custom user commands and keymaps list

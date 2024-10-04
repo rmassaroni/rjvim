@@ -1,32 +1,34 @@
 local alpha = require('alpha')
 local dashboard = require('alpha.themes.dashboard')
 local onepage = require('plugins.alpha.pages.onepage')
+local statuspage = require('plugins.alpha.pages.statuspage')
 
 local pages = {
     onepage,
-    {
-        header = {
-            type = "text",
-            val = {
-                "Second Page",
-                "------------------",
-            },
-            opts = {
-                position = "center",
-                hl = "Type"
-            }
-        },
-        buttons = {
-            type = "group",
-            val = {
-                dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
-                dashboard.button("q", "  Quit", ":qa<CR>")
-            },
-            opts = {
-                spacing = 1
-            }
-        }
-    }
+    -- {
+    --     header = {
+    --         type = "text",
+    --         val = {
+    --             "Second Page",
+    --             "------------------"
+    --         },
+    --         opts = {
+    --             position = "center",
+    --             hl = "Type"
+    --         }
+    --     },
+    --     buttons = {
+    --         type = "group",
+    --         val = {
+    --             dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
+    --             dashboard.button("q", "  Quit", ":qa<CR>")
+    --         },
+    --         opts = {
+    --             spacing = 1
+    --         }
+    --     }
+    -- }
+    -- statuspage
 }
 
 local current_page = 1
