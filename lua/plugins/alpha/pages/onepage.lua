@@ -20,21 +20,21 @@ local function layout()
     --     end
     --     return lines
     -- end
-    local function read_ascii_file(filepath)
-        local lines = {}
-        local file = io.open(filepath, "r")
-        if file then
-            for line in file:lines() do
-                table.insert(lines, line)
-            end
-            file:close()
-        else
-            print("Could not read the Neofetch ASCII file: " .. filepath)
-        end
-        return lines
-    end
-
-    local neofetch_ascii = read_ascii_file(vim.fn.stdpath('config') .. '/lua/plugins/alpha/output.txt')
+    -- local function read_ascii_file(filepath)
+    --     local lines = {}
+    --     local file = io.open(filepath, "r")
+    --     if file then
+    --         for line in file:lines() do
+    --             table.insert(lines, line)
+    --         end
+    --         file:close()
+    --     else
+    --         print("Could not read the Neofetch ASCII file: " .. filepath)
+    --     end
+    --     return lines
+    -- end
+    --
+    -- local neofetch_ascii = read_ascii_file(vim.fn.stdpath('config') .. '/lua/plugins/alpha/output.txt')
 
 
     return {
