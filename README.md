@@ -1,3 +1,8 @@
+- ARM friendly
+- still need to integrate changes from cross and other branches
+
+
+
 ```bash
 bash <(curl https://raw.githubusercontent.com/rmassaroni/rjvim/main/install.sh)
 ```
