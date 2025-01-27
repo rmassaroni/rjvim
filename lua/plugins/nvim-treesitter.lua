@@ -16,3 +16,6 @@ return {
         }
     end
 }
+
+
+--must ensure gcc installation in install script. sudo apt install gcc

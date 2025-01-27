@@ -26,7 +26,7 @@ return  {
                 "html",
                 "cssls",
                 "jdtls",
-                "clangd",
+                -- "clangd",
                 "sqls",
                 "kotlin_language_server",
                 "gopls",

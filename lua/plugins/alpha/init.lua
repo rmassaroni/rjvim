@@ -9,3 +9,6 @@ return {
         require('plugins.alpha.pages.pages')
     end
 }
+
+
+--looks weird if font size is big. it should check for font and window size
