@@ -16,3 +16,5 @@ powershell -NoProfile -Command "Set-ExecutionPolicy Bypass -Scope Process -Force
 - config button not working
 - ascii colors
 - multiple columns alpha
+- check configs on all branches and devices
+- copilot status on alpha
