@@ -20,3 +20,4 @@ powershell -NoProfile -Command "Set-ExecutionPolicy Bypass -Scope Process -Force
 - copilot status on alpha
 - symbols are messed up on this computer (sfl)
 - check nvim configs on all branches and devices
+- missing enchantify
