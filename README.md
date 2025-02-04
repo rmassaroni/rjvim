@@ -22,3 +22,4 @@ powershell -NoProfile -Command "Set-ExecutionPolicy Bypass -Scope Process -Force
 - check nvim configs on all branches and devices
 - missing enchantify
 - fix clangd or somehow dont set it up if on arm
+- nerd fonts
