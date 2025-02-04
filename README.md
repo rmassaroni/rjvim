@@ -23,3 +23,4 @@ powershell -NoProfile -Command "Set-ExecutionPolicy Bypass -Scope Process -Force
 - missing enchantify
 - fix clangd or somehow dont set it up if on arm
 - nerd fonts
+- copilot requiring node
