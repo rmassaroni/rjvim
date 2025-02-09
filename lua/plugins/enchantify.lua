@@ -1,0 +1,3 @@
+return {
+    "rmassaroni/enchantify"
+}
