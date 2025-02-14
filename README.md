@@ -24,3 +24,4 @@ powershell -NoProfile -Command "Set-ExecutionPolicy Bypass -Scope Process -Force
 - fix clangd or somehow dont set it up if on arm
 - nerd fonts
 - copilot requiring node
+- add readme button to alpha
